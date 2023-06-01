@@ -20,23 +20,23 @@ class Bot(commands.Bot):
         for channel in channels:
             users = db.search(User.name == channel)
             if not users:
-                db.insert({"name": channel, "death_counter": 0})
+                db.insert({"name": channel, "death_count": 0})
     
     def get_death_count(self, user):
         User = Query()
-        death_count = db.search(User.name == user.name)[0].get("death_counter", 0)
+        death_count = db.search(User.name == user.name)[0].get("death_count", 0)
         return death_count
 
     def increment_death_count(self, user):
         death_count = self.get_death_count(user)
         death_count += 1
-        db.update({"death_counter": death_count}, Query().name == user.name)
+        db.update({"death_count": death_count}, Query().name == user.name)
         return death_count
         
     def reset_death_count(self, user):
         death_count = self.get_death_count(user)
         death_count = 0
-        db.update({"death_counter": death_count}, Query().name == user.name)
+        db.update({"death_count": death_count}, Query().name == user.name)
         return death_count
 
     async def event_ready(self):

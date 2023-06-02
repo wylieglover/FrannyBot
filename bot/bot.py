@@ -35,15 +35,6 @@ class Bot(commands.Bot):
         print(f'Logged into {self.channels}')
         self.initialize_db(self.channels)
 
-    async def event_message(self, message):
-        print(f"{message.channel.name} | {message.author.name}: {message.content}")
-        await self.handle_commands(message)
-
-    @commands.command(name="jc")
-    async def jc(self, ctx, channel):
-        await ctx.send(f"Joining {channel}")
-        await self.join_channels([channel])
-        
     @routines.routine(seconds=5)
     async def reloadcogs(self, bot):
         for cog in cogs:

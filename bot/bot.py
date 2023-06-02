@@ -1,3 +1,4 @@
+#bot.py
 import os 
 from death_count import Death
 from twitchio.ext import commands, routines

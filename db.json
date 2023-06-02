@@ -1,1 +1,1 @@
-{"_default": {"1": {"name": "wyliegg", "death_count": 0}, "2": {"name": "psuedoo", "death_count": 0}, "3": {"name": "fransheymayumi", "death_count": 1}, "4": {"name": "franny_bot", "death_count": 1}}}
+{"_default": {"1": {"name": "wyliegg", "death_count": 1, "loss_count": 5, "win_count": 5}, "2": {"name": "psuedoo", "death_count": 0}, "3": {"name": "fransheymayumi", "death_count": 1}, "4": {"name": "franny_bot", "death_count": 1}}}

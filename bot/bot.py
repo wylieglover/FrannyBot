@@ -6,6 +6,7 @@ from tinydb import TinyDB, Query
 
 cogs = [
     "cogs.deathcog",
+    "cogs.winlosscog"
 ]
 
 class Bot(commands.Bot):
@@ -22,7 +23,6 @@ class Bot(commands.Bot):
 
         for cog in cogs:
             self.load_module(cog)
-            self.reloadcogs.start(bot=self)
 
     def initialize_db(self, channels):
         User = Query()
@@ -36,10 +36,6 @@ class Bot(commands.Bot):
         print(f'Logged into {self.channels}')
         self.initialize_db(self.channels)
 
-    @routines.routine(seconds=5)
-    async def reloadcogs(self, bot):
-        for cog in cogs:
-            bot.reload_module(cog)
 
 if __name__ == "__main__":
     bot = Bot()

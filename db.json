@@ -1,1 +1,42 @@
-{"_default": {"1": {"name": "wyliegg", "death_count": 1, "loss_count": 5, "win_count": 5}, "2": {"name": "psuedoo", "death_count": 0}, "3": {"name": "fransheymayumi", "death_count": 1}, "4": {"name": "franny_bot", "death_count": 1}}}
+{
+    "death_counter_table": {
+        "1": {
+            "death_count": 0,
+            "name": "franny_bot"
+        },
+        "2": {
+            "death_count": 0,
+            "name": "wyliegg"
+        },
+        "3": {
+            "death_count": 0,
+            "name": "psuedoo"
+        },
+        "4": {
+            "death_count": 0,
+            "name": "fransheymayumi"
+        }
+    },
+    "win_loss_counter_table": {
+        "1": {
+            "loss count": 0,
+            "name": "franny_bot",
+            "win count": 0
+        },
+        "2": {
+            "loss_count": 0,
+            "name": "wyliegg",
+            "win_count": 0
+        },
+        "3": {
+            "loss count": 0,
+            "name": "psuedoo",
+            "win count": 0
+        },
+        "4": {
+            "loss count": 0,
+            "name": "fransheymayumi",
+            "win count": 0
+        }
+    }
+}

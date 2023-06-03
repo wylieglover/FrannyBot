@@ -9,17 +9,17 @@ class WinLossCog(commands.Cog):
     @commands.command(name="win")
     async def incrementwins(self, ctx):
         win_count = self.win_loss.increment_win_count(ctx.channel)
-        await ctx.send(f"Win counter: {win_count}")
+        await ctx.send(f"Wins: {win_count}")
 
     @commands.command(name="loss")
     async def incrementloss(self, ctx):
         loss_count = self.win_loss.increment_loss_count(ctx.channel)
-        await ctx.send(f"Loss counter: {loss_count}")
+        await ctx.send(f"Losses: {loss_count}")
 
     @commands.command(name="wl")
     async def displaywl(self, ctx):
-        win_count = self.win_loss.increment_win_count(ctx.channel)
-        loss_count = self.win_loss.increment_loss_count(ctx.channel)
+        win_count = self.win_loss.get_win_count(ctx.channel)
+        loss_count = self.win_loss.get_loss_count(ctx.channel)
         await ctx.send(f"Wins: {win_count} | Losses: {loss_count}")
     
     @commands.command(name="resetwl")

@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo "CHANNELS=${{ secrets.ENV_CHANNELS }}" > .env 
+          echo "TMI_TOKEN=${{ secrets.ENV_TMI_TOKEN }}" >> .env
+          echo "CLIENT_ID=${{ secrets.ENV_CLIENT_ID }}" >> .env
+          echo "BOT_NICK=${{ secrets.ENV_BOT_NICK }}" >> .env
+          echo "BOT_PREFIX=${{ secrets.ENV_BOT_PREFIX }}" >> .env
+          cat .env
+
+      - name: Docker-Compose Remote Deployment
+        run: docker-compose up -d --force-recreate --build

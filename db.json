@@ -15,6 +15,10 @@
         "4": {
             "death_count": 0,
             "name": "fransheymayumi"
+        },
+        "5": {
+            "death_count": 0,
+            "name": "ghostelectricity"
         }
     },
     "win_loss_counter_table": {
@@ -34,9 +38,14 @@
             "win count": 0
         },
         "4": {
-            "loss count": 0,
+            "loss_count": 1,
             "name": "fransheymayumi",
-            "win count": 0
+            "win_count": 2
+        },
+        "5": {
+            "loss_count": 0,
+            "name": "ghostelectricity",
+            "win_count": 0
         }
     }
 }

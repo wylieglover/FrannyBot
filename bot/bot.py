@@ -47,6 +47,10 @@ class Bot(commands.Bot):
         print(f'Logged into {self.channels}')
         self.initialize_db(self.channels)
 
+    @commands.command(name="ping")
+    async def ping(self, ctx):
+        await ctx.send("pong")
+
 if __name__ == "__main__":
     bot = Bot()
     bot.run()

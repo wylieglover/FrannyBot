@@ -1,8 +1,10 @@
-#bot.py
 import os 
 from death_count import Death
 from twitchio.ext import commands, routines
 from tinydb import TinyDB, Query
+from dotenv import load_dotenv
+
+load_dotenv()
 
 cogs = [
     "cogs.deathcog",
@@ -15,13 +17,14 @@ class Bot(commands.Bot):
         self.death_table = self.db.table('death_counter_table')
         self.win_loss_table = self.db.table('win_loss_counter_table')
 
-        self.channels = os.environ["CHANNELS"].split("#")
+        self.channels = os.getenv("CHANNELS").split("#")
 
         super().__init__(
-            token=os.environ['TMI_TOKEN'],
-            client_id=os.environ['CLIENT_ID'],
-            nick=os.environ['BOT_NICK'],
-            prefix=os.environ['BOT_PREFIX'],
+            token=os.getenv('TMI_TOKEN'),
+            
+            client_id=os.getenv('CLIENT_ID'),
+            nick=os.getenv('BOT_NICK'),
+            prefix=os.getenv('BOT_PREFIX'),
             initial_channels=self.channels
         )
 

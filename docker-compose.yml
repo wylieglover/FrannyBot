@@ -4,6 +4,6 @@ services:
     container_name: "frannybot"
     volumes:
       - type: bind
-        source: ./db.json
+        source: /home/wylie/DB/db.json
         target: /home/wylie/DB/db.json
     build: .

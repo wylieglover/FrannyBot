@@ -1,6 +1,5 @@
 from tinydb import TinyDB, Query
 
-
 class WinLoss:
     def __init__(self):
         self.db = TinyDB(

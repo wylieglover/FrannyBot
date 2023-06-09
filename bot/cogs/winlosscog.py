@@ -34,3 +34,4 @@ class WinLossCog(commands.Cog):
 
 def prepare(bot):
     bot.add_cog(WinLossCog(bot))
+    

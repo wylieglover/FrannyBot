@@ -1,6 +1,5 @@
 from tinydb import TinyDB, Query
 
-
 class Death:
     def __init__(self):
         self.db = TinyDB(

@@ -4,7 +4,7 @@ from tinydb import TinyDB, Query
 class WinLoss:
     def __init__(self):
         self.db = TinyDB(
-            "../DB/db.json", sort_keys=True, indent=4, separators=(",", ": ")
+            "/home/wylie/DB/db.json", sort_keys=True, indent=4, separators=(",", ": ")
         )
         self.win_loss_table = self.db.table("win_loss_counter_table")
 

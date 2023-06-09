@@ -12,7 +12,7 @@ cogs = ["cogs.deathcog", "cogs.winlosscog"]
 class Bot(commands.Bot):
     def __init__(self):
         self.db = TinyDB(
-            "../DB/db.json", sort_keys=True, indent=4, separators=(",", ": ")
+            "/home/wylie/DB/db.json", sort_keys=True, indent=4, separators=(",", ": ")
         )
         self.death_table = self.db.table("death_counter_table")
         self.win_loss_table = self.db.table("win_loss_counter_table")

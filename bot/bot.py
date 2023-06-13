@@ -1,3 +1,4 @@
+#bot.py
 import os
 from death_count import Death
 from twitchio.ext import commands, routines
@@ -7,7 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 cogs = ["cogs.deathcog", "cogs.winlosscog"]
-
 
 class Bot(commands.Bot):
     def __init__(self):
